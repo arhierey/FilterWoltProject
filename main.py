@@ -33,7 +33,7 @@ if __name__ == '__main__':
             if 2200 > price > 0:
                 text.append(button_text)
                 buttons_filtered += '\n' + str(button)
-                pprint(text)
+                #pprint(text)
 
     new_html = f'''
     <!DOCTYPE html>
@@ -48,8 +48,8 @@ if __name__ == '__main__':
     </html>
     '''
 
-    with open('new_html.html', 'w') as f:
-        f.write(new_html)
+    with open('new_html.html', 'wb') as f:
+        f.write(new_html.encode('utf-8'))
 
     webbrowser.open('http://localhost:8000/new_html.html')
 
